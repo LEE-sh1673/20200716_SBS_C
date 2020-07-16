@@ -44,6 +44,16 @@ int main(void)
 
   result = result-- || (data = 0);
   printf("Op output: %d, %d\n", data, result); // 0 ,0
+  
+  // 특정 숫자(2)만 남기고 모두 0으로
+  data = 12;
+  data &= (0x1 << 2);
+  printf("data: %#02x\n", data);
+
+  // 특정 숫자(2)만 0으로
+  data = 12;
+  data &= ~(0x1 << 2);
+  printf("data: %#02x\n", data);
 
   return 0;
 }

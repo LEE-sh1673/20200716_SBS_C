@@ -12,6 +12,9 @@ int main(void)
   int data = 5;
   int result = 0;
 
+  int num1 = 0;
+  int num2 = 0;
+
   // input the string
   printf("Enter your name (under the %d): ", STR_MAX);
   scanf("%[^\n]s", name);
@@ -54,6 +57,18 @@ int main(void)
   data = 12;
   data &= ~(0x1 << 2);
   printf("data: %#02x\n", data);
+
+  // If statement
+  printf("Enter the num1, num2:");
+  scanf("%d %d", &num1, &num2);
+
+  if (num1 > num2) {
+    printf("Bigger one is %d\n", num1);
+  } else if (num1 == num2) {
+    printf("Both is same\n");
+  } else {
+    printf("Bigger one is %d\n", num2);
+  }
 
   return 0;
 }
